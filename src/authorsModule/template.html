@@ -1,0 +1,6 @@
+<div class="module">
+    <button (click)="getAuthors()" class="btn btn-primary">Get authors</button>
+    <div class="authors-list">
+        {{authors | async | json}}
+    </div>
+</div>

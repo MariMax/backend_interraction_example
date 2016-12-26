@@ -7,6 +7,13 @@ import { Component, ViewEncapsulation } from '@angular/core';
     './app.component.css',
     './bootstrap.css',
   ],
-  template: `<login-form></login-form>`
+  template: `
+    <div>
+      <login-form></login-form>
+      <div class="controls">
+        <authors></authors>
+      </div>
+    </div>
+  `
 })
-export class AppComponent {}
+export class AppComponent { }

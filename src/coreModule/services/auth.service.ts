@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
-import {FBConnector} from './fb.service';
+import { FBConnector } from './fb.service';
 
 @Injectable()
 export class AuthService {
