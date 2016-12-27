@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CoreModule } from '../coreModule';
+import { CoreModule, ApiService } from '../coreModule';
 import { AuthorsComponent } from './authors.component';
-import { ApiService } from '../coreModule/services/api.service';
 import { AuthorsService } from './authors.service';
 
 @NgModule({
@@ -15,7 +14,7 @@ import { AuthorsService } from './authors.service';
     // AuthorsService
     {
       provide: AuthorsService,
-      useFactory: (apiService) => new AuthorsService(apiService),
+      useClass: AuthorsService,
       deps: [ApiService]
     }
   ]

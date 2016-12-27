@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // App is our top level component
 import { ApiService } from './services/api.service';
 import { AuthService } from './services/auth.service';
+export {ApiService, AuthService};
 
 const providers = [ApiService, AuthService];
 

@@ -13,6 +13,7 @@ export class ApiService {
   api_url: string = 'https://my-bootcamp.herokuapp.com';
 
   constructor(private http: Http) {
+    console.log('create api service');
   }
 
   private checkForError(response: Response): Response | Observable<any> {

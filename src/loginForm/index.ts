@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../coreModule/services/auth.service';
+import { AuthService } from '../coreModule';
 
 @Component({
   selector: 'login-form',
