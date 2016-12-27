@@ -19,7 +19,6 @@ const providers = [ApiService, AuthService];
     ReactiveFormsModule,
   ],
   exports: [FormsModule, ReactiveFormsModule, CommonModule],
-  providers: providers,
 })
 export class CoreModule {
   static forRoot(): ModuleWithProviders {

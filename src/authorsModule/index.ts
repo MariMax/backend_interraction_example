@@ -11,6 +11,8 @@ import { AuthorsService } from './authors.service';
   imports: [CoreModule],
   exports: [AuthorsComponent],
   providers: [
+    // ApiService, 
+    // AuthorsService
     {
       provide: AuthorsService,
       useFactory: (apiService) => new AuthorsService(apiService),
