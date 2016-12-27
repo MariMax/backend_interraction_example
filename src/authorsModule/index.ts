@@ -9,14 +9,6 @@ import { AuthorsService } from './authors.service';
   ],
   imports: [CoreModule],
   exports: [AuthorsComponent],
-  providers: [
-    // ApiService, 
-    // AuthorsService
-    {
-      provide: AuthorsService,
-      useClass: AuthorsService,
-      deps: [ApiService]
-    }
-  ]
+  providers: [AuthorsService],
 })
 export class AuthorsModule { }

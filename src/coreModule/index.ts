@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,8 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // App is our top level component
 import { ApiService } from './services/api.service';
 import { AuthService } from './services/auth.service';
-export {ApiService, AuthService};
 
+export { ApiService, AuthService };
 const providers = [ApiService, AuthService];
 
 @NgModule({
@@ -22,10 +22,17 @@ const providers = [ApiService, AuthService];
   exports: [FormsModule, ReactiveFormsModule, CommonModule],
 })
 export class CoreModule {
+  constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
+    if (parentModule) {
+      throw new Error(
+        'CoreModule is already loaded. Import it in the AppModule only');
+    }
+  }
+
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: CoreModule,
-      providers: providers,
+      providers,
     };
   }
 
@@ -34,6 +41,5 @@ export class CoreModule {
       ngModule: CoreModule
     };
   }
-
 }
 
