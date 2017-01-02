@@ -1,0 +1,9 @@
+<div class="module">
+    <button (click)="getCourses()" class="btn btn-primary">Get courses</button>
+    <button (click)="addCourse()" class="btn btn-primary">Add random course</button>
+    <button (click)="removeCourse()" class="btn btn-primary">Remove random course</button>
+    <button (click)="updateCourse()" class="btn btn-primary">Update random course</button>
+    <div class="courses-list">
+        {{courses  | json}}
+    </div>
+</div>

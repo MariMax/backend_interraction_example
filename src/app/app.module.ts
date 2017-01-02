@@ -5,6 +5,7 @@ import { CoreModule } from '../coreModule';
 import { LoginFormComponent } from '../loginForm';
 import { AppComponent } from './app.component';
 import { AuthorsModule } from '../authorsModule';
+import { CoursesModule } from '../coursesModule';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -15,6 +16,7 @@ import { AuthorsModule } from '../authorsModule';
   imports: [
     CoreModule.forRoot(),
     AuthorsModule,
+    CoursesModule,
   ]
 })
 export class AppModule { }

@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: [
     './styles.css',
   ],
+  host:{
+    style:`flex:1`
+  },
   template: require('./template.html'),
 })
 export class AuthorsComponent {

@@ -12,6 +12,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
       <login-form></login-form>
       <div class="controls">
         <authors></authors>
+        <courses></courses>
       </div>
     </div>
   `
